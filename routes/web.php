@@ -1,0 +1,29 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\GuruController;
+use Illuminate\Support\MapelController;
+use Illuminate\Support\PengajarController;
+
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
+//route resource
+Route::resource('/guru', \App\Http\Controllers\GuruController::class);
+Route::resource('/mapel', \App\Http\Controllers\MapelController::class);
+Route::resource('/pengajar', \App\Http\Controllers\PengajarController::class);
+
